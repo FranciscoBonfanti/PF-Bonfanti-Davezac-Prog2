@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { PageInvalidComponent } from 'src/app/pages/main-loser/page-invalid/page-invalid.component';
+import { Router } from '@angular/router';  
 
 @Component({
   selector: 'app-popup-login',
@@ -9,13 +9,9 @@ import { PageInvalidComponent } from 'src/app/pages/main-loser/page-invalid/page
 })
 export class PopupLoginComponent {
 
-   public constructor(public dialog: MatDialog) {}
+  public constructor(public dialog: MatDialog, private router: Router) {}
 
-  // openAuthDialog(): void {
-  //   this.dialog.open(PageInvalidComponent, {
-  //     width: '400px'
-  //   });
-  // }
-
-
+  home2(){
+    this.router.navigate(['/home']);  
+  }
 }

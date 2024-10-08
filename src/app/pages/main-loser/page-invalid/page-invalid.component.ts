@@ -18,6 +18,7 @@ export class PageInvalidComponent {
 
   popupLogin(): void {
     this.dialog.open(PopupLoginComponent, {
+      width:"350px"
     });
   }
 }

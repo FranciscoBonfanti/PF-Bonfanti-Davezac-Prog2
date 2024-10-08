@@ -14,13 +14,19 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { HomeComponent } from './pages/home/home.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormLoginComponent,
     PageInvalidComponent,
-    PopupLoginComponent
+    PopupLoginComponent,
+    HomeComponent,
+    SidebarComponent,
+    NavbarComponent
   ],
   imports: [
     ReactiveFormsModule,

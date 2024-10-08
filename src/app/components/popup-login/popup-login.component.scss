@@ -1,0 +1,39 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.mat-form-field {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+
+}
+
+button {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.mat-tab-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+mat-tab {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
