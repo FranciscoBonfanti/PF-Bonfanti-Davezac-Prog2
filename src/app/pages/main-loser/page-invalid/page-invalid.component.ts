@@ -12,10 +12,6 @@ export class PageInvalidComponent {
 
   constructor(private router: Router, public dialog: MatDialog) {}
 
-  navegar(): void {
-    this.router.navigate(['login']);
-  }
-
   popupLogin(): void {
     this.dialog.open(PopupLoginComponent, {
       width:"350px"

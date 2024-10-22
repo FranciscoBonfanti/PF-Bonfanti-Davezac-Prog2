@@ -9,9 +9,15 @@ import { Router } from '@angular/router';
 })
 export class PopupLoginComponent {
 
-  public constructor(public dialog: MatDialog, private router: Router) {}
+  constructor(public dialog: MatDialog, private router: Router) {}
 
-  home2(){
-    this.router.navigate(['/home']);  
+  home2(email: string, password: string){
+    if (email && password) {
+      localStorage.setItem('email', email);
+      localStorage.setItem('password', password);  
+      this.router.navigate(['/home']);
+    } else {
+      alert('Por favor, completa ambos campos');
+    }
   }
 }

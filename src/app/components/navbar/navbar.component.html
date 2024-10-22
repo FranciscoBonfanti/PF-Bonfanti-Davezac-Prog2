@@ -1,1 +1,13 @@
-<p>navbar works!</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span class="navbar-logo">Clínica Virtual</span>
+      <span class="spacer"></span>
+      <button mat-button routerLink="/home">Inicio</button>
+      <button mat-button routerLink="/nuevo-turno">Nuevo Turno</button>
+      <button mat-button routerLink="/mis-turnos">Mis Turnos</button>
+      <button mat-button routerLink="/mis-datos">Mis Datos</button>
+      <span class="spacer"></span>
+      <span class="navbar-username">{{ username }}</span>
+      <button mat-button (click)="logout()">Cerrar Sesión</button>
+    </mat-toolbar-row>
+  </mat-toolbar>

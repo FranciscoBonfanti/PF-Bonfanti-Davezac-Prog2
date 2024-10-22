@@ -1,32 +1,54 @@
-<mat-tab-group>
-    <mat-tab label="Iniciar Sesión">
-      <form>
-        <mat-form-field class="full-width">
-          <mat-label>Correo electrónico</mat-label>
-          <input matInput type="email" placeholder="name@example.com">
-        </mat-form-field>
-        <mat-form-field class="full-width">
-          <mat-label>Contraseña</mat-label>
-          <input matInput type="password" placeholder="Contraseña">
-        </mat-form-field>
-        <button mat-raised-button color="primary" (click)="home2()">Iniciar Sesión</button>
-      </form>
-    </mat-tab>
-    <mat-tab label="Registrarse">
-      <form>
-        <mat-form-field class="full-width">
-          <mat-label>Nombre</mat-label>
-          <input matInput type="text" placeholder="Tu nombre">
-        </mat-form-field>
-        <mat-form-field class="full-width">
-          <mat-label>Correo electrónico</mat-label>
-          <input matInput type="email" placeholder="name@example.com">
-        </mat-form-field>
-        <mat-form-field class="full-width">
-          <mat-label>Contraseña</mat-label>
-          <input matInput type="password" placeholder="Contraseña">
-        </mat-form-field>
-        <button mat-raised-button color="accent">Registrarse</button>
-      </form>
-    </mat-tab>
+<div class="tab-container"> <!-- Asegúrate de tener un contenedor adecuado -->
+  <mat-tab-group>
+      <mat-tab label="Iniciar Sesión">
+          <form>
+              <mat-form-field class="full-width">
+                  <mat-label>Correo electrónico</mat-label>
+                  <input matInput #emailInput type="email" placeholder="name@example.com">
+              </mat-form-field>
+              <mat-form-field class="full-width">
+                  <mat-label>Contraseña</mat-label>
+                  <input matInput #passwordInput type="password" placeholder="Contraseña">
+              </mat-form-field>
+              <button mat-raised-button color="primary" (click)="home2(emailInput.value, passwordInput.value)">Iniciar Sesión</button>
+          </form>
+      </mat-tab>
+      <mat-tab label="Registrarse">
+          <form>
+              <mat-form-field class="full-width">
+                  <mat-label>DNI</mat-label>
+                  <input matInput type="text" placeholder="44025526">
+              </mat-form-field>
+              <mat-form-field class="full-width">
+                  <mat-label>Apellido</mat-label>
+                  <input matInput type="text" placeholder="Davezac">
+              </mat-form-field>
+              <mat-form-field class="full-width">
+                  <mat-label>Nombre</mat-label>
+                  <input matInput type="text" placeholder="Kevin">
+              </mat-form-field>
+              <mat-form-field class="full-width">
+                  <mat-label>Fecha de Nacimiento</mat-label>
+                  <input matInput type="date" placeholder="2002-04-15">
+              </mat-form-field>
+              <mat-form-field class="full-width">
+                  <mat-label>Contraseña</mat-label>
+                  <input matInput type="password" placeholder="123456">
+              </mat-form-field>
+              <mat-form-field class="full-width">
+                  <mat-label>Rol</mat-label>
+                  <input matInput type="text" placeholder="paciente">
+              </mat-form-field>
+              <mat-form-field class="full-width">
+                  <mat-label>Correo electrónico</mat-label>
+                  <input matInput type="email" placeholder="kevindavezac@gmail.com">
+              </mat-form-field>
+              <mat-form-field class="full-width">
+                  <mat-label>Teléfono</mat-label>
+                  <input matInput type="text" placeholder="3496417428">
+              </mat-form-field>
+              <button mat-raised-button color="accent">Registrarse</button>
+          </form>
+      </mat-tab>
   </mat-tab-group>
+</div>

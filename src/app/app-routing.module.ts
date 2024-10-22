@@ -5,10 +5,10 @@ import { PageInvalidComponent } from './pages/main-loser/page-invalid/page-inval
 import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: PageInvalidComponent },  // Primera vista será PageInvalidComponent
+  { path: '', component: PageInvalidComponent, pathMatch: 'full' },  
   { path: 'login', component: FormLoginComponent },
   { path: 'home', component: HomeComponent },
-  { path: '**', redirectTo: '' }  // Wildcard para rutas no válidas que redirige a PageInvalidComponent
+  { path: '**', redirectTo: '', pathMatch: 'full' } 
 ];
 
 @NgModule({

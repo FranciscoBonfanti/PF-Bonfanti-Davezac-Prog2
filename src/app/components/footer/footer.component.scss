@@ -1,0 +1,35 @@
+$footer-bg-color: #3f51b5; // Cambia este color a tu preferencia
+$footer-text-color: white;
+
+.footer {
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  padding: 20px;
+  text-align: center;
+
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .clinic-info,
+    .social-media {
+      flex: 1;
+      margin: 10px;
+    }
+
+    .social-media {
+      a {
+        margin: 0 10px;
+        color: $footer-text-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

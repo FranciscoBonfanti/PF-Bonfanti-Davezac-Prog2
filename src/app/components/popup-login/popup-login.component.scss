@@ -3,15 +3,14 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .mat-form-field {
     width: 100%;
     max-width: 400px;
     margin-bottom: 20px;
-
 }
 
 button {
@@ -29,11 +28,21 @@ button {
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
 
+.mat-tab-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Cambiado para evitar que se centre verticalmente */
+    height: 100vh; /* Mantiene el alto del grupo de tabs */
+    overflow-y: auto; /* Permite scroll vertical */
+    overflow-x: hidden; /* Oculta scroll horizontal si no es necesario */
 }
 
 mat-tab {
     display: flex;
     justify-content: center;
     width: 100%;
+    flex-shrink: 0; /* Evita que el tab se reduzca de tamaño */
 }
+
