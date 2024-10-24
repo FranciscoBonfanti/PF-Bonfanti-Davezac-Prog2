@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -12,6 +12,17 @@ export class PruebaService {
   constructor(private http: HttpClient) {}
 
   getData(): Observable<any>{
-    return this.http.get<any>(this.apiURL);
+
+    // let headers = new HttpHeaders();
+    // headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+
+    const headers = new HttpHeaders({'Content-Type':'application/json','Authorization':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mjk2MDc1MzY5NTgsImlhdCI6MTcyOTYwNTczNn0.cR0m-U1OHSRbVINvz59bfM8vwrgfA4bPweinZPBhVoM'});
+
+
+    return this.http.get<any>(this.apiURL, { 'headers': headers });
+    
   }
+
+  
+
 }

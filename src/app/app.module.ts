@@ -23,6 +23,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PruebaComponent } from './components/prueba/prueba.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
